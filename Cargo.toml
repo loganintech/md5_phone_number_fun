@@ -6,4 +6,4 @@ edition = "2018"
 
 [dependencies]
 md5 = "0.6.1"
-hashbrown = "0.2.0"
+hex-slice = "0.1.4"
