@@ -4,7 +4,7 @@ use std::io::{BufReader, BufRead, Read};
 fn main() {
     let file = OpenOptions::new()
         .read(true)
-        .open("./collisions_complete.txt")
+        .open("./collisions.txt")
         .unwrap();
 
 
@@ -14,7 +14,7 @@ fn main() {
     for source in line_iter {
         let file_two = OpenOptions::new()
             .read(true)
-            .open("./collisions_complete.txt")
+            .open("./collisions.txt")
             .unwrap();
         let split_source = source.split(':').collect::<Vec<_>>();
         for check in BufReader::new(file_two).lines().filter_map(Result::ok) {
