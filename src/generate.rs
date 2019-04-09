@@ -13,8 +13,8 @@ fn main() {
         .unwrap();
     let mut file = BufWriter::new(file);
 
-    (1_000_000_0000u128..1_999_999_9999u128).for_each(move |i| {
+    (1_999_999_9999u128..1_999_999_9999u128).for_each(move |i| {
         let bytes: [u8; 16] = compute(i.to_be_bytes()).into();
-        file.write_fmt(format_args!("{:x}\n", bytes.as_hex())).unwrap();
+        file.write_fmt(format_args!("{}: {:x}\n", i, bytes.as_hex())).unwrap();
     });
 }

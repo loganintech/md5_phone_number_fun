@@ -4,6 +4,14 @@ version = "0.1.0"
 authors = ["Logan Saso <logansaso@gmail.com>"]
 edition = "2018"
 
+[[bin]]
+name = "generate"
+path = "src/generate.rs"
+
+[[bin]]
+name = "check"
+path = "src/check.rs"
+
 [dependencies]
 md5 = "0.6.1"
 hex-slice = "0.1.4"
